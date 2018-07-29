@@ -1,0 +1,21 @@
+<p>
+  test works! {{name.length}}<br />
+  {{name.toUpperCase()}}<br />
+  {{"welcome" + 3}}<br />
+  {{greetUser()}}<br />
+  {{siteUrl}}
+</p>
+
+<input [id]="myId" type="text" value={{name}} [style.color]="hasError ? 'red' : 'green'"/>
+{{name}}
+{{myname}}
+
+<button (click)="onClick($event)">Greet</button>
+<button (click)="greet = 'welcome sanjiv'">Greeting</button>
+<br />
+<input type="text" #myInput />
+<button (click)="logMessage(myInput.value)">Log</button>
+{{greet}}
+{{countryName}}
+<br />
+<input type="text" [(ngModel)]="name" />

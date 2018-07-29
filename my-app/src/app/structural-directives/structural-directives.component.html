@@ -1,0 +1,41 @@
+<h2 *ngIf="displayName;then thenBlock; else elseBlock " >
+  sanjiv...
+</h2>
+
+<ng-template #thenBlock>
+    <h2>
+      name is not hidden...
+    </h2>
+  </ng-template>
+
+<ng-template #elseBlock>
+  <h2>
+    name is hidden...
+  </h2>
+</ng-template>
+
+<button (click)="toggleName()">toggle</button>
+<br />
+
+<span [ngSwitch]="color">
+<p *ngSwitchCase="'red'">
+  this is red....
+</p>
+<p *ngSwitchCase="'blue'">
+this is blue..
+</p>
+<p *ngSwitchDefault>
+  this is default...
+</p>
+</span>
+
+<div *ngFor="let color of colors; index as i">
+  {{i}} {{color}}
+  <h2 *ngIf="i === 2" >
+      sanjiv...
+    </h2>
+</div>
+
+{{parentData}}
+
+<button (click)="fireEvent()">child Event</button>
